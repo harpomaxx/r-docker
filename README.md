@@ -1,6 +1,6 @@
 A set of docker images for R/Rstudio with keras/tensorflow-gpu support.
 
-Heavly based on rocker-org images (https://github.com/rocker-org)
+Heavily based on rocker-org images (https://github.com/rocker-org)
 
 
 ## REQUIREMENTS
