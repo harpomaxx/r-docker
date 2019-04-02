@@ -12,7 +12,7 @@ ENV LANGUAGE=en_US.UTF-8 \
 
 
 ## R installation
-RUN sh -c 'echo "deb http://cran.rstudio.com/bin/linux/ubuntu xenial/" >> /etc/apt/sources.list' && \
+RUN sh -c 'echo "deb http://cran.rstudio.com/bin/linux/ubuntu xenial-cran35/" >> /etc/apt/sources.list' && \
 gpg --keyserver keyserver.ubuntu.com --recv-key E084DAB9 && \
 gpg -a --export E084DAB9 | apt-key add - && \
-apt-get update &&  apt-get install -y --no-install-recommends r-base r-base-dev libxml2-dev libxt-dev libssl-dev libcurl4-openssl-dev imagemagick  gdebi-core git wget && apt-get clean
+apt-get update &&  apt-get install -y --no-install-recommends --allow-change-held-packages  r-base r-base-dev libxml2-dev libxt-dev libssl-dev libcurl4-openssl-dev imagemagick  gdebi-core git wget && apt-get clean
