@@ -35,11 +35,13 @@ sudo apt-get install -y nvidia-docker2
 sudo pkill -SIGHUP dockerd
 ```
 
-## AVAILABLE IMAGES
+## AVAILABLE (SUPPORTED)  IMAGES
 
 **nvidia-base-r:** 	the last base r distrubion from CRAN
 
 **nvidia-rstudio:** the last rstudio-server version
+
+**nvidia-base-r-keras:** 	the last base r distrubion from CRAN plus keras/tensorflow-gpu
 
 **nvidia-rstudio-keras:** the last keras/tensorflow-gpu
 

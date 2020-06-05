@@ -1,4 +1,4 @@
-last version of rstudio server. Docker readapted from rocker rstudio/versioned
+last version of rstudio server plus opencl support. Docker readapted from rocker rstudio/versioned
 
 # Example
 ```

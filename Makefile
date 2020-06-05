@@ -1,6 +1,9 @@
 nvidia-base-r-latest:
 		nvidia-docker build --rm -t nvidia-base-r nvidia-base-r/
 
+nvidia-base-r-keras-latest:
+		nvidia-docker build --rm -t nvidia-base-r-keras nvidia-base-r-keras/
+
 nvidia-rstudio-latest:nvidia-base-r-latest
 		nvidia-docker build --rm -t nvidia-rstudio nvidia-rstudio/
 

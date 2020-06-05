@@ -21,12 +21,13 @@ ENV PATH=/usr/lib/rstudio-server/bin:$PATH
 # Rstudio
 
 RUN  RSTUDIO_LATEST=$(wget --no-check-certificate -qO- https://s3.amazonaws.com/rstudio-server/current.ver) \
-  && [ -z "$RSTUDIO_VERSION" ] && RSTUDIO_VERSION=$RSTUDIO_LATEST || true \
-  && wget -q http://download2.rstudio.org/rstudio-server-${RSTUDIO_VERSION}-amd64.deb \
+  && [ -z "$RSTUDIO_VERSION" ] && RSTUDIO_VERSION=${RSTUDIO_LATEST%%-*} || true \
+  && wget -q http://download2.rstudio.org/server/bionic/amd64/rstudio-server-${RSTUDIO_VERSION}-amd64.deb \
   && gdebi --n rstudio-server-${RSTUDIO_VERSION}-amd64.deb \
-  && rm rstudio-server-*-amd64.deb \
-  ## Symlink pandoc & standard pandoc templates for use system-wide
-  && ln -s /usr/lib/rstudio-server/bin/pandoc/pandoc /usr/local/bin \
+  && rm rstudio-server-*-amd64.deb 
+
+#RUN  ## Symlink pandoc & standard pandoc templates for use system-wide
+RUN  ln -s /usr/lib/rstudio-server/bin/pandoc/pandoc /usr/local/bin \
   && ln -s /usr/lib/rstudio-server/bin/pandoc/pandoc-citeproc /usr/local/bin \
   && git clone https://github.com/jgm/pandoc-templates \
   && mkdir -p /opt/pandoc/templates \
