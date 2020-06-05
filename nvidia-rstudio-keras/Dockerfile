@@ -1,5 +1,5 @@
 ## Dockerfile
-FROM nvidia-base-r-keras:latest
+FROM harpomaxx/nvidia-base-r-keras:latest
 
 RUN apt-get update -q && apt-get upgrade -y -q
 
