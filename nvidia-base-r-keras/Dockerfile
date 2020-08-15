@@ -19,7 +19,7 @@ ENV LANGUAGE=en_US.UTF-8 \
 ## Keras deps
 RUN pip3 install pip --upgrade
 RUN pip install tensorflow-gpu==2.1.0
-RUN pip install keras
+RUN pip install keras==2.3.1
 
 
 ## R installation
