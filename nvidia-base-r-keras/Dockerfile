@@ -18,7 +18,7 @@ ENV LANGUAGE=en_US.UTF-8 \
 
 ## Keras deps
 RUN pip3 install pip --upgrade
-RUN pip install tensorflow-gpu==2.2.0
+RUN pip install tensorflow-gpu==2.1.0
 RUN pip install keras
 
 
