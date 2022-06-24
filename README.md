@@ -37,11 +37,11 @@ sudo pkill -SIGHUP dockerd
 
 ## AVAILABLE (SUPPORTED)  IMAGES
 
-**nvidia-base-r:** 	the last base r distrubion from CRAN
+**nvidia-base-r:** 	the last base r distribution from CRAN
 
 **nvidia-rstudio:** the last rstudio-server version
 
-**nvidia-base-r-keras:** 	the last base r distrubion from CRAN plus keras/tensorflow-gpu
+**nvidia-base-r-keras:** 	the last base r distribution from CRAN plus keras/tensorflow-gpu
 
 **nvidia-rstudio-keras:** the last keras/tensorflow-gpu
 
