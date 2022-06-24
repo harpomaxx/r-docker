@@ -17,7 +17,7 @@ sudo apt-get update && apt-get install docker-ce
 
 ```
 
-### [nvidia-docker](https://github.com/NVIDIA/nvidia-docker)
+### [nvidia-docker](https://github.com/NVIDIA/nvidia-docker) (NOT REQUIRED Anymore)
 
 #### Add the package repositories
 ```
